@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-blue-400 p-4">
-      <div className="flex relative flex-row items-center justify-center gap-5 top-2">
+      <div className="flex relative flex-row items-center justify-center gap-5">
         <a href="/">
           <img
             src="/Aaron_Logo.jpg"
