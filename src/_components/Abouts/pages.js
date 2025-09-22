@@ -8,7 +8,7 @@ export default async function AboutComponents() {
             <p className="text-lg">所有的作品都會放在這</p>
             <div className="flex relative top-5 gap-6">
                 <button className="bg-blue-700 w-[60px] h-10 rounded-md hover:bg-blue-600 transition-colors">簡歷</button>
-                <button className="w-15 h-10 rounded-md hover:bg-gray-100 text-black transition-colors">English</button>
+                <button className="w-15 h-10 rounded-md bg-transparent text-white hover:bg-gray-100 hover:text-black transition-colors">English</button>
             </div>
         </div>
 
