@@ -5,7 +5,7 @@ import Portfolio from './_components/Portfolio/pages'
 
 export default function RootLayout({}) {
   return (
-    <html>
+    <html lang="en">
       <body>
         <Abouts/>
         <AboutsText/>
