@@ -2,9 +2,6 @@ import './global.css'
 
 // import components
 import NavBar from "./_components/NavBar/pages"
-import Abouts from "./_components/Abouts/pages"
-import AboutsText from './_components/AboutsText/pages';
-import Exp from './_components/Exp/pages';
 import FooterComponents from "./_components/Footer/pages";
 
 export const metadata = {
@@ -17,11 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <NavBar/>
-        <Abouts/>
-        <AboutsText/>
-        <Exp/>
-        <FooterComponents/>
+        <NavBar />
+        {children} 
+        <FooterComponents />
       </body>
     </html>
   );

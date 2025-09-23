@@ -1,29 +1,28 @@
-import Image from "next/image";
+import Link from 'next/link'
 
 export default function Navbar() {
   const navLinks = [
-    { text: "關於我", href: "/About" },
-    { text: "簡歷", href: "/Resume" },
-    { text: "聯絡我", href: "/Contact" },
+    { text: "關於我", href: "/" },
+    { text: "聯絡我", href: "/contact" }
   ];
 
   return (
     <nav className="bg-blue-400 flex flex-row items-center justify-center gap-96 h-16">
-      <a href="/">
+      <Link href="/">
         <img
           src="/Aaron_Logo.png"
           className="w-[150px]"
         />
-      </a>
+      </Link>
       <ul className="flex gap-6">
         {navLinks.map((link, index) => (
           <li key={index}>
-            <a
+            <Link
               href={link.href}
               className="hover:text-blue-200 transition-colors"
             >
               {link.text}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
