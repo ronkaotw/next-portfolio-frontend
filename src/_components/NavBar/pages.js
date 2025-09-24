@@ -1,31 +1,56 @@
-import Link from 'next/link'
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navLinks = [
     { text: "關於我", href: "/" },
-    { text: "聯絡我", href: "/contact" }
+    { text: "聯絡我", href: "/contact" },
   ];
 
   return (
-    <nav className="bg-blue-400 flex flex-row items-center justify-center gap-96 h-16">
-      <Link href="/">
-        <img
-          src="/Aaron_Logo.png"
-          className="w-[150px]"
-        />
-      </Link>
-      <ul className="flex gap-6">
-        {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link
-              href={link.href}
-              className="hover:text-blue-200 transition-colors"
-            >
-              {link.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="flex flex-col items-center h-16 bg-blue-400 md:bg-blue-400 sm:bg-blue-400">
+      <div className="flex items-center justify-center gap-36 w-full h-16">
+        <Link href="/">
+          <img src="/Aaron_Logo.png" alt="Logo" className="w-[150px]" />
+        </Link>
+
+        <ul className="hidden lg:flex flex-row gap-6">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.href}
+                className="text-white hover:text-blue-200 transition-colors"
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <button
+          className="lg:hidden text-5xl text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+      </div>
+
+      {isOpen && (
+        <ul className="flex flex-col items-center gap-4 mt-2 lg:hidden w-full bg-blue-300 py-4">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.href}
+                className="text-white hover:text-blue-200 transition-colors"
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
