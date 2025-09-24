@@ -11,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex flex-col items-center h-16 bg-blue-400 md:bg-blue-400 sm:bg-blue-400">
+    <nav className="bg-blue-400 flex flex-col items-center h-16">
       <div className="flex items-center justify-center gap-36 w-full h-16">
         <Link href="/">
           <img src="/Aaron_Logo.png" alt="Logo" className="w-[150px]" />
