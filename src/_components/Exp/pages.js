@@ -1,9 +1,9 @@
 export default function Experience() {
   return (
-    <section className="w-full h-screen flex flex-row justify-center items-start gap-36 p-10">
+    <section className="lg:w-full h-screen gap-36 p-10 flex flex-col md:flex-row justify-center items-center">
       <div className="flex flex-col">
         <h2 className="text-[50px] font-bold mb-4">Experience</h2>
-        <hr className="h-px my-4 bg-white border-0" />
+        <hr className="lg:h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
         <p className="text-[15px]">經驗</p>
       </div>
 
