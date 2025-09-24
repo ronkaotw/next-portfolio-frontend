@@ -8,10 +8,10 @@ export default async function AboutsText() {
 
 
     return (
-    <section className="w-full h-screen flex col-auto justify-center gap-36">
+    <section className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center gap-10  mt-3">
         <div className="col">
             <h2 className="text-3xl font-bold mb-4 text-[50px]">Abouts</h2>
-            <hr className="relative h-px my-8 bg-white border-0 mt-5"/>
+            <hr className="relative h-px my-8 bg-white border-0 mt-5 md: hidden sm:hidden"/>
             <p className="text-[15px]">關於 Aaron</p>
         </div>
         <div className="col">
