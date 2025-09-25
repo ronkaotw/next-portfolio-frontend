@@ -18,7 +18,13 @@ export default function AboutComponents({  }) {
             English
           </button>
         </div>
-        <img src="/Mouse_Scrolling.gif" className="w-[40px] relative top-28 cursor-pointer "/>
+      </div>
+      <div className="w-full flex justify-center absolute bottom-10">
+        <img
+          src="/Mouse_Scrolling.gif"
+          alt="Scroll Down Indicator"
+          className="w-[30px] sm:w-[35px] md:w-[40px] lg:w-[45px] cursor-pointer"
+        />
       </div>
     </motion.section>
   );

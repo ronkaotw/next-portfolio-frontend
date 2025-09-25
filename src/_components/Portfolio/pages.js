@@ -22,7 +22,7 @@ export default function Experience() {
 
       <div className="flex flex-col gap-8">
         <div className="relative flex flex-col">
-          <div className="w-[150px] h-[50px]  bg-gray-200 rounded-lg flex flex-row items-center justify-center gap-5 top-5 md:top-0 relative">
+          <div className="w-[150px] h-[50px bg-gray-200 rounded-lg flex flex-row items-center justify-center gap-5 top-5 md:top-0 relative">
                 <button className="bg-blue-700 w-[60px] h-10 rounded-md hover:bg-blue-600 transition-colors">Pinned</button>
                 <button className="w-15 h-10 rounded-md bg-transparent text-black hover:bg-gray-500 hover:text-white transition-colors">All</button>
           </div> 
