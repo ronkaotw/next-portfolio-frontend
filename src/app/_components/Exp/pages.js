@@ -39,7 +39,7 @@ export default function Experience() {
     >
       <div className="flex flex-col">
         <h2 className="text-[50px] font-bold mb-4">Experience</h2>
-        <hr className="lg:h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
+        <hr className="lg:block h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
         <p className="text-[15px]">經驗</p>
       </div>
 
