@@ -1,3 +1,6 @@
+"use client"; 
+import { motion } from "motion/react"
+
 export default function Experience() {
   const Portfolio = {
     title: "Aviation_AI",
@@ -10,7 +13,7 @@ export default function Experience() {
   }
 
   return (
-    <section className="lg:w-full h-screen relative flex flex-col md:flex-row sm:flex-row justify-center items-center gap-36 p-10">
+    <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, ease: "easeOut" }} className="lg:w-full h-screen relative flex flex-col md:flex-row sm:flex-row justify-center items-center gap-36 p-10">
       <div className="flex flex-col">
         <h2 className="text-[50px] font-bold mb-4">Portfolio</h2>
         <hr className="h-px my-4 bg-white border-0" />
@@ -25,6 +28,6 @@ export default function Experience() {
           </div> 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

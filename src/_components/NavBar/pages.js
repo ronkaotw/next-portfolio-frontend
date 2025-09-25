@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { motion } from "motion/react"
 import Link from "next/link";
 
 export default function Navbar() {
@@ -11,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-blue-400 flex flex-col items-center h-16">
+    <motion.nav initial={{ opacity: 0, y: -10 }} whileInView={{ opacity: 1, y: 1 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, ease: "easeOut" }} className="bg-blue-400 flex flex-col items-center h-16">
       <div className="flex items-center justify-center gap-36 w-full h-16">
         <Link href="/">
           <img src="/Aaron_Logo.png" alt="Logo" className="w-[150px]" />
@@ -51,6 +52,6 @@ export default function Navbar() {
           ))}
         </ul>
       )}
-    </nav>
+    </motion.nav>
   );
 }
