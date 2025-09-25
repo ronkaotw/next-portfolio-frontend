@@ -1,8 +1,8 @@
 "use client"; 
 import { motion } from "motion/react"
 
-export default function AboutComponents({  }) {
-  return (
+export default function AboutComponents({ scrolling }) {
+   return (
      <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center text-center gap-36">
       <img src="/Aaron_Logo.png" className="w-[150px]" />
       <div className="flex flex-col">
@@ -21,6 +21,7 @@ export default function AboutComponents({  }) {
       </div>
       <div className="w-full flex justify-center absolute bottom-10">
         <img
+          onClick={scrolling}
           src="/Mouse_Scrolling.png"
           alt="滑鼠滾動動畫"
           className="w-[35px] sm:w-[35px] md:w-[40px] lg:w-[45px] cursor-pointer"
