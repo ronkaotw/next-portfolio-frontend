@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 export default function AboutComponents({  }) {
   return (
-     <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, ease: "easeOut" }} className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center text-center gap-36">
+     <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center text-center gap-36">
       <img src="/Aaron_Logo.png" className="w-[150px]" />
       <div className="flex flex-col">
         <h2 className="text-3xl font-bold mb-4">

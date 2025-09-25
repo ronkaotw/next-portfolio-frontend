@@ -1,7 +1,7 @@
 "use client"; 
 import { motion } from "motion/react"
 
-export default async function ContactPage() {
+export default function ContactPage() {
   const ContactMe = {
     textGit: "GitHub",
     linkRelGit: "GithubLink",
@@ -20,7 +20,7 @@ export default async function ContactPage() {
     linkActionEmail: "GET",
   }
     return (
-    <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, ease: "easeOut" }} className="w-full h-screen flex items-center justify-center text-center">
+    <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="w-full h-screen flex items-center justify-center text-center">
       <div className="w-[500px] rounded-3xl flex flex-col items-center gap-6 p-6">
         <h2 className="text-2xl">聯絡我</h2>
 
