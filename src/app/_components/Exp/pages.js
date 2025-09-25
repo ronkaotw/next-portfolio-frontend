@@ -45,7 +45,7 @@ export default function Experience() {
 
       <div className="flex flex-col gap-8">
         {timelineItems.map((item, idx) => (
-          <div className="flex gap-2" key={idx}>
+          <div className="flex gap-5" key={idx}>
             <h3 className="text-[30px]">{item.year}</h3>
             <p className="text-[15px]">{item.content}</p>
           </div>
