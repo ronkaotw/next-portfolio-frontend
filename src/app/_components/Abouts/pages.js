@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function AboutComponents({ scrolling }) {
   return (
@@ -8,8 +9,11 @@ export default function AboutComponents({ scrolling }) {
       whileInView={{ opacity: 1, y: 0 }}
       className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 md:gap-20 px-6 lg:px-24 relative"
     >
-      <img
+      <Image
         src="/Aaron_Logo.png"
+        alt="Logo"
+        width={180} // 最大寬度
+        height={180} // 高度可依比例調整
         className="w-[120px] sm:w-[150px] md:w-[180px] mb-6 md:mb-0"
       />
 
@@ -32,10 +36,12 @@ export default function AboutComponents({ scrolling }) {
       </div>
 
       <div className="w-full flex justify-center absolute bottom-5 md:bottom-20">
-        <img
-          onClick={scrolling}
+        <Image
           src="/Mouse_Scrolling.png"
           alt="滑鼠滾動動畫"
+          width={45}
+          height={45}
+          onClick={scrolling}
           className="w-[30px] sm:w-[35px] md:w-[40px] lg:w-[45px] cursor-pointer"
         />
       </div>

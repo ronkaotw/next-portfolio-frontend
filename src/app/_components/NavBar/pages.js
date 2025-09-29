@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -12,10 +13,19 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav initial={{ opacity: 0, y: -10 }} whileInView={{ opacity: 1, y: 1 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.6, ease: "easeOut" }} className="bg-blue-400 flex flex-col items-center h-16">
+    <motion.nav
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 1 }}
+      className="bg-blue-400 flex flex-col items-center h-16"
+    >
       <div className="flex items-center justify-center gap-36 w-full h-16">
         <Link href="/">
-          <img src="/Aaron_Logo.png" alt="Logo" className="w-[150px]" />
+          <Image
+            src="/Aaron_Logo.png"
+            alt="Logo"
+            width={150} // 必須指定寬度
+            height={50} // 必須指定高度
+          />
         </Link>
 
         <ul className="hidden lg:flex flex-row gap-6">
