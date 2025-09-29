@@ -16,7 +16,7 @@ export default function Navbar() {
     <motion.nav
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-blue-400 flex flex-col items-center h-16"
+      className="bg-blue-400 flex flex-col items-center min-h-[64px]"
     >
       <div className="flex items-center justify-center gap-36 w-full h-16">
         <Link href="/">
