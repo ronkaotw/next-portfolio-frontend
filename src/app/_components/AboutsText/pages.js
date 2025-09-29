@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
@@ -9,7 +9,7 @@ export default function AboutsText() {
     async function fetchAbouts() {
       try {
         const res = await fetch("/api/about");
-        const result = await res.json();    
+        const result = await res.json();
         const aboutsArray = result?.data?.getAbouts || [];
         setAbouts(aboutsArray);
       } catch (err) {
@@ -34,14 +34,14 @@ export default function AboutsText() {
         <hr className="lg:block relative h-px my-8 bg-white border-0 mt-5 md:hidden sm:hidden" />
         <p className="text-[15px]">關於 Aaron</p>
       </div>
-    
-     {abouts.map((about, index) => (
-      <div className="col" key={index}>
-        <p className="relative w-md mt-5 sm:w-sm">
-          {about.text}
-        </p>
-      </div>
-    ))}
+
+      {abouts.map((about, index) => (
+        <div className="col" key={index}>
+          <p className="relative mt-5 w-full max-w-md sm:max-w-sm break-words">
+            {about.text}
+          </p>
+        </div>
+      ))}
     </motion.section>
   );
 }

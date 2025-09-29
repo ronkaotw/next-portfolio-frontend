@@ -32,7 +32,7 @@ export default function Experience() {
         <p className="text-[15px]">作品集</p>
       </div>
 
-      <div className="w-full flex flex-wrap justify-center gap-8">
+      <div className="w-full flex flex-wrap relative justify-center gap-8">
         {portfolios.map((portfolio, index) => (
           <a
             key={index}
@@ -40,14 +40,14 @@ export default function Experience() {
             rel={portfolio.linkRel}
             target="_blank"
             className="group w-full sm:w-[280px] md:w-[300px] lg:w-[320px] 
-                 transition-transform duration-300 ease-in-out 
-                 hover:scale-105 flex justify-center"
+           transition-transform duration-300 ease-in-out 
+           hover:scale-105 flex justify-center"
           >
             <div
               className="w-full max-w-[320px] h-[220px] 
-                   bg-gradient-to-br from-blue-200 to-blue-300 
-                   rounded-xl shadow-md p-4 flex flex-col justify-between 
-                   transition-shadow duration-300 group-hover:shadow-xl"
+             bg-gradient-to-br from-blue-200 to-blue-300 
+             rounded-xl shadow-md p-4 flex flex-col justify-between 
+             transition-shadow duration-300 group-hover:shadow-xl text-center"
             >
               <div>
                 <h2 className="text-lg font-bold text-gray-900 mb-2 truncate">
