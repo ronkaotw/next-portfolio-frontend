@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <motion.nav
       initial={{ opacity: 0, y: -10 }}
-      whileInView={{ opacity: 1, y: 1 }}
+      animate={{ opacity: 1, y: 0 }}
       className="bg-blue-400 flex flex-col items-center h-16"
     >
       <div className="flex items-center justify-center gap-36 w-full h-16">
@@ -23,8 +23,9 @@ export default function Navbar() {
           <Image
             src="/Aaron_Logo.png"
             alt="Logo"
-            width={150} // 必須指定寬度
-            height={50} // 必須指定高度
+            width={150}
+            height={150}
+            className="w-[150px] h-auto"
           />
         </Link>
 

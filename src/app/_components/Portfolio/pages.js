@@ -23,7 +23,9 @@ export default function Experience() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="lg:w-full h-screen relative flex flex-col justify-start items-center gap-10 p-10"
     >
       <div className="flex flex-col items-center text-center">

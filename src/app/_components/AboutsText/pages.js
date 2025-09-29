@@ -37,7 +37,7 @@ export default function AboutsText() {
 
       {abouts.map((about, index) => (
         <div className="col" key={index}>
-          <p className="relative mt-5 w-full max-w-md sm:max-w-sm break-words">
+          <p className="relative mt-5 w-full max-w-md sm:max-w-sm whitespace-normal">
             {about.text}
           </p>
         </div>

@@ -6,14 +6,14 @@ export default function AboutComponents({ scrolling }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 md:gap-20 px-6 lg:px-24 relative"
     >
       <Image
         src="/Aaron_Logo.png"
         alt="Logo"
-        width={180} // 最大寬度
-        height={180} // 高度可依比例調整
+        width={180}
+        height={180}
         className="w-[120px] sm:w-[150px] md:w-[180px] mb-6 md:mb-0"
       />
 
