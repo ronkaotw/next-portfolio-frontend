@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "about": "About Me",
+    "contact": "Contact",
+    "resume": "Resume",
+    "portfolio": "Portfolio"
+  },
+  "about": {
+    "intro": "This is",
+    "name": "Aaron",
+    "description": "All works will be showcased here"
+  },
+  "abouttext": {
+    "About": "About",
+    "title": "Aaron",
+    "content": "I am a passionate backend developer with a strong interest in information technology. During my internship at a startup, I gained hands-on experience with backend technologies (such as Node.js) and frontend frameworks (such as Vue.js). This journey allowed me to participate in multiple projects, collaborate with senior engineers, and enhance both my technical skills and problem-solving abilities."
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "intern": "2019–2023 Intern｜Startup",
+      "editor": "2021–2023 Video Editor｜YTBR",
+      "coscup": "2023 Brodcast Team｜COSCUP",
+      "sitcon2023": "2023 Brodcast Team｜SITCON",
+      "sitcon2024": "2024 Brodcast Team｜SITCON"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "backend": {
+      "title": "Backend_Portfolio",
+      "year": "2019-2025",
+      "role": "Backend Developer",
+      "skills": "Node.js, Express, PostgresSQL, MongoDB"
+    },
+    "editor": {
+      "title": "YouTube_Editor",
+      "year": "2021-2025",
+      "role": "Editor",
+      "skills": "Adobe Premiere, Adobe Photoshop"
+    }
+  },
+  "footer": {
+    "madeWith": "Made With ❤️ Aaron",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  }
+}
