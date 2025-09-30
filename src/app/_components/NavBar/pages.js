@@ -3,13 +3,15 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navLinks = [
-    { text: "關於我", href: "/" },
-    { text: "聯絡我", href: "/contact" },
+    { text: t("nav.about"), href: "/" },
+    { text: t("nav.contact"), href: "/contact" },
   ];
 
   return (
@@ -41,6 +43,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
         <button
           className="lg:hidden text-5xl text-white"
           onClick={() => setIsOpen(!isOpen)}

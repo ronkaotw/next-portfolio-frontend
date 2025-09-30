@@ -1,8 +1,15 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function AboutComponents({ scrolling }) {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -11,7 +18,7 @@ export default function AboutComponents({ scrolling }) {
     >
       <Image
         src="/Aaron_Logo.png"
-        alt="Logo"
+        alt={t("about.name")}
         width={180}
         height={180}
         className="w-[120px] sm:w-[150px] md:w-[180px] mb-6 md:mb-0"
@@ -19,18 +26,27 @@ export default function AboutComponents({ scrolling }) {
 
       <div className="flex flex-col items-center md:items-start max-w-md">
         <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold mb-4">
-          這裡是
+          {t("about.intro")}
           <span className="block text-[50px] sm:text-[60px] md:text-[70px]">
-            Aaron
+            {t("about.name")}
           </span>
         </h2>
-        <p className="text-lg sm:text-xl mb-6">所有的作品都會放在這</p>
+        <p className="text-lg sm:text-xl mb-6">{t("about.description")}</p>
         <div className="flex gap-4 sm:gap-6">
-          <button className="bg-blue-700 w-[80px] sm:w-[100px] h-10 rounded-md hover:bg-blue-600 transition-colors">
-            簡歷
-          </button>
-          <button className="w-[80px] sm:w-[100px] h-10 rounded-md bg-transparent text-white hover:bg-gray-100 hover:text-black transition-colors">
-            English
+          <a
+            href="https://drive.google.com/file/d/1hKNFN9-o9lk9ecr0-hqPB1hvi9iUjIrS/view?usp=sharing"
+            target="_blank"
+            rel="Resume"
+          >
+            <button className="bg-blue-700 w-[80px] sm:w-[100px] h-10 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
+              {t("nav.resume")}
+            </button>
+          </a>
+          <button
+            className="w-[80px] sm:w-[100px] h-10 rounded-md bg-transparent text-white hover:bg-gray-100 hover:text-black transition-colors cursor-pointer"
+            onClick={() => changeLanguage(i18n.language === "en" ? "zh" : "en")}
+          >
+            {i18n.language === "en" ? "中文" : "English"}
           </button>
         </div>
       </div>
@@ -38,7 +54,7 @@ export default function AboutComponents({ scrolling }) {
       <div className="w-full flex justify-center absolute bottom-5 md:bottom-20">
         <Image
           src="/Mouse_Scrolling.png"
-          alt="滑鼠滾動動畫"
+          alt="Scroll Animation"
           width={45}
           height={45}
           onClick={scrolling}
