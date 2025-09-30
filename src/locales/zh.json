@@ -26,20 +26,18 @@
     }
   },
   "portfolio": {
-    "portfolio": {
-      "title": "作品集",
-      "backend": {
-        "title": "後端工程作品",
-        "year": "2019-2025",
-        "role": "後端工程師",
-        "skills": "Node.js, Express, PostgresSQL, MongoDB"
-      },
-      "editor": {
-        "title": "YouTube 剪輯師",
-        "year": "2021-2025",
-        "role": "剪輯師",
-        "skills": "Adobe Premiere, Adobe Photoshop"
-      }
+    "title": "作品集",
+    "backend": {
+      "title": "後端工程作品",
+      "year": "2019-2025",
+      "role": "後端工程師",
+      "skills": "Node.js, Express, PostgresSQL, MongoDB"
+    },
+    "editor": {
+      "title": "YouTube 剪輯師",
+      "year": "2021-2025",
+      "role": "剪輯師",
+      "skills": "Adobe Premiere, Adobe Photoshop"
     }
   },
   "footer": {
