@@ -1,39 +1,46 @@
-"use client";
-import { useTranslation } from "react-i18next";
-
-export default function FooterComponents() {
-  const { t } = useTranslation();
+export default async function FooterComponents() {
+  const FooterText = {
+    text: "Made With ❤️ Aaron",
+    social: {
+      textgit: "Github",
+      linkgit: "https://github.com/ronkaotw",
+      textIn: "LinkedIn",
+      linkIn: "https://www.linkedin.com/in/ronkaotw/",
+      textemail: "Email",
+      link: "mailto: aaronkao88@gmail.com",
+    },
+  };
 
   return (
     <footer className="bg-blue-400 flex items-center justify-center h-28 p-4">
-      <div className="flex flex-col sm:flex-row items-center gap-10">
-        <p>{t("footer.madeWith")}</p>
+      <div className="lg: flex flex-col sm:flex-row items-center gap-10">
+        <p>{FooterText.text}</p>
         <ul className="flex gap-6">
           <li>
             <a
-              className="hover:text-blue-200 transition-colors"
-              href="https://github.com/ronkaotw"
+              className="hover:text-blue-200 transition-colors cursor-pointer"
+              href={FooterText.social.linkgit}
               target="_blank"
             >
-              {t("footer.github")}
+              {FooterText.social.textgit}
             </a>
           </li>
           <li>
             <a
-              className="hover:text-blue-200 transition-colors"
-              href="https://www.linkedin.com/in/ronkaotw/"
+              className="hover:text-blue-200 transition-colors cursor-pointer"
+              href={FooterText.social.linkIn}
               target="_blank"
             >
-              {t("footer.linkedin")}
+              {FooterText.social.textIn}
             </a>
           </li>
           <li>
             <a
-              className="hover:text-blue-200 transition-colors"
-              href="mailto:aaronkao88@gmail.com"
+              className="hover:text-blue-200 transition-colors cursor-pointer"
+              href={FooterText.social.link}
               target="_blank"
             >
-              {t("footer.email")}
+              {FooterText.social.textemail}
             </a>
           </li>
         </ul>
