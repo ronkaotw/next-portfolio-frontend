@@ -1,10 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
 
 export default function AboutsText() {
-  const { t } = useTranslation();
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
@@ -32,17 +30,15 @@ export default function AboutsText() {
       className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center gap-10 mt-3"
     >
       <div className="col">
-        <h2 className="text-3xl font-bold mb-4 text-[50px]">
-          {t("abouttext.About")}
-        </h2>
+        <h2 className="text-3xl font-bold mb-4 text-[50px]">About</h2>
         <hr className="lg:block relative h-px my-8 bg-white border-0 mt-5 md:hidden sm:hidden" />
-        <p className="text-[15px]">{t("abouttext.title")}</p>
+        <p className="text-[15px]">Aaron</p>
       </div>
 
-      {abouts.map((_, index) => (
+      {abouts.map((abouts, index) => (
         <div className="col" key={index}>
           <p className="relative mt-5 w-full max-w-md sm:max-w-sm whitespace-normal">
-            {t("abouttext.content")}
+            {abouts.text}
           </p>
         </div>
       ))}

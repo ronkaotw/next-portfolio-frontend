@@ -1,15 +1,8 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 export default function AboutComponents({ scrolling }) {
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -18,36 +11,32 @@ export default function AboutComponents({ scrolling }) {
     >
       <Image
         src="/Aaron_Logo.png"
-        alt={t("about.name")}
+        alt="Aaron Logo"
         width={180}
         height={180}
         className="w-[120px] sm:w-[150px] md:w-[180px] mb-6 md:mb-0"
       />
 
-      <div className="flex flex-col items-center md:items-start max-w-md">
+      <div className="flex flex-col items-center max-w-md">
         <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold mb-4">
-          {t("about.intro")}
+          這裡是
           <span className="block text-[50px] sm:text-[60px] md:text-[70px]">
-            {t("about.name")}
+            Aaron
           </span>
         </h2>
-        <p className="text-lg sm:text-xl mb-6">{t("about.description")}</p>
-        <div className="flex gap-4 sm:gap-6">
+        <p className="text-lg sm:text-xl mb-6">所有的作品集都會在這</p>
+
+        {/* 簡歷按鈕置中 */}
+        <div className="flex justify-center mt-4">
           <a
             href="https://drive.google.com/file/d/1hKNFN9-o9lk9ecr0-hqPB1hvi9iUjIrS/view?usp=sharing"
             target="_blank"
             rel="Resume"
           >
             <button className="bg-blue-700 w-[80px] sm:w-[100px] h-10 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
-              {t("nav.resume")}
+              簡歷
             </button>
           </a>
-          <button
-            className="w-[80px] sm:w-[100px] h-10 rounded-md bg-transparent text-white hover:bg-gray-100 hover:text-black transition-colors cursor-pointer"
-            onClick={() => changeLanguage(i18n.language === "en" ? "zh" : "en")}
-          >
-            {i18n.language === "en" ? "中文" : "English"}
-          </button>
         </div>
       </div>
 

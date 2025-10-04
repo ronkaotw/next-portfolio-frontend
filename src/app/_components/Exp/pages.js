@@ -1,15 +1,31 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
 
 export default function Experience() {
-  const { t } = useTranslation(); // 預設 translation.json
+  const [exps, setExps] = useState([]);
 
-  const timelineKeys = [
-    { year: "2019～2023", key: "experience.items.intern" },
-    { year: "2021～2023", key: "experience.items.editor" },
-    { year: "2023", key: "experience.items.coscup" },
-    { year: "2024", key: "experience.items.sitcon2024" },
+  useEffect(() => {
+    async function fetchResume() {
+      try {
+        const res = await fetch("/api/Exp");
+        const result = await res.json();
+        const resumeArray = result?.data?.getResumes || [];
+        setExps(resumeArray);
+      } catch (err) {
+        console.error("載入經驗資料錯誤：", err);
+        setExps([]);
+      }
+    }
+
+    fetchResume();
+  }, []);
+
+  const timelineItems = [
+    { year: "2019～2023", content: "實習生｜新創公司" },
+    { year: "2021～2023", content: "創作者剪輯師｜YTBR" },
+    { year: "2023", content: "製播組｜COSCUP" },
+    { year: "2024", content: "製播組｜SITCON" },
   ];
 
   return (
@@ -21,16 +37,16 @@ export default function Experience() {
       className="lg:w-full h-screen gap-36 p-10 flex flex-col md:flex-row justify-center items-center"
     >
       <div className="flex flex-col">
-        <h2 className="text-[50px] font-bold mb-4">{t("experience.title")}</h2>
-        <hr className="lg:block h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
-        <p className="text-[15px]">{t("experience.title")}</p>
+        <h2 className="text-[50px] font-bold mb-4">Experience</h2>
+        <hr className="lg:h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
+        <p className="text-[15px]">經驗</p>
       </div>
 
       <div className="flex flex-col gap-8">
-        {timelineKeys.map((item, idx) => (
-          <div className="flex gap-5" key={idx}>
+        {timelineItems.map((item, idx) => (
+          <div className="flex gap-2" key={idx}>
             <h3 className="text-[30px]">{item.year}</h3>
-            <p className="text-[15px]">{t(item.key)}</p>
+            <p className="text-[15px]">{item.content}</p>
           </div>
         ))}
       </div>

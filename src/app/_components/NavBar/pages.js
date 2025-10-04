@@ -10,8 +10,8 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   const navLinks = [
-    { text: t("nav.about"), href: "/" },
-    { text: t("nav.contact"), href: "/contact" },
+    { text: "關於我", href: "/" },
+    { text: "聯絡我", href: "/contact" },
   ];
 
   return (
@@ -43,7 +43,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
         <button
           className="lg:hidden text-5xl text-white"
           onClick={() => setIsOpen(!isOpen)}
