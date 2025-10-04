@@ -9,7 +9,6 @@ export default function Experience() {
     { year: "2019～2023", key: "experience.items.intern" },
     { year: "2021～2023", key: "experience.items.editor" },
     { year: "2023", key: "experience.items.coscup" },
-    { year: "2023", key: "experience.items.sitcon2023" },
     { year: "2024", key: "experience.items.sitcon2024" },
   ];
 
