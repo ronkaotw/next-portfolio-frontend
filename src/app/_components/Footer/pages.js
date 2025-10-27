@@ -7,7 +7,7 @@ export default async function FooterComponents() {
       textIn: "LinkedIn",
       linkIn: "https://www.linkedin.com/in/ronkaotw/",
       textemail: "Email",
-      link: "mailto: aaronkao88@gmail.com",
+      link: "mailto:contact@ronkao.tw",
     },
   };
 
