@@ -25,21 +25,8 @@ export default function AboutComponents({ scrolling }) {
           </span>
         </h2>
         <p className="text-lg sm:text-xl mb-6">所有的作品集都會在這</p>
-
-        {/* 簡歷按鈕置中 */}
-        <div className="flex justify-center mt-4">
-          <a
-            href="https://drive.google.com/file/d/1hKNFN9-o9lk9ecr0-hqPB1hvi9iUjIrS/view?usp=sharing"
-            target="_blank"
-            rel="Resume"
-          >
-            <button className="bg-blue-700 w-[80px] sm:w-[100px] h-10 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
-              簡歷
-            </button>
-          </a>
-        </div>
       </div>
-
+      
       <div className="w-full flex justify-center absolute bottom-5 md:bottom-20">
         <Image
           src="/Mouse_Scrolling.png"
