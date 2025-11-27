@@ -22,6 +22,7 @@ export default function Experience() {
   }, []);
 
   const timelineItems = [
+    { year: "2025～至今", content: "實習製播系統工程師｜撼動創造" },
     { year: "2019～2023", content: "實習生｜新創公司" },
     { year: "2021～2023", content: "創作者剪輯師｜YTBR" },
     { year: "2023", content: "製播組｜COSCUP" },
