@@ -14,6 +14,13 @@ export default function FriendLinks() {
       avatarText: "https://qwo877.github.io/me/images/image14841987481.png",
       featured: true,
     },
+    {
+      name: "皮蛋",
+      href: "https://bruh0422.xyz/",
+      description: "系邊",
+      avatarText: "https://www.gravatar.com/avatar/973e7ddc08d7e07ce113d08ef3975ebd?s=256",
+      featured: true,
+    },
   ];
 
   return (
