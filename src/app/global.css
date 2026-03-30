@@ -1,10 +1,70 @@
 @import "tailwindcss";
-*{
-    padding: 0%;
-    margin: 0;
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background-color: #1484f5;
-    color: #FFFFFF;
+body {
+  background-color: #1484f5;
+  color: #FFFFFF;
+}
+
+/* Layout Components */
+@layer components {
+  .section-container {
+    @apply w-full h-screen flex items-center justify-center;
+  }
+
+  .section-title {
+    @apply text-[50px] font-bold mb-4;
+  }
+
+  .section-divider {
+    @apply h-px my-4 bg-white border-0;
+  }
+
+  .section-subtitle {
+    @apply text-[15px];
+  }
+
+  .responsive-title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .card-base {
+    @apply rounded-xl shadow-md transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl;
+  }
+
+  .link-hover {
+    @apply hover:text-blue-200 transition-colors cursor-pointer;
+  }
+
+  .responsive-px {
+    @apply px-6 lg:px-24;
+  }
+
+  .responsive-py {
+    @apply py-16 lg:py-24;
+  }
+
+  .responsive-gap {
+    @apply gap-10 md:gap-20;
+  }
+
+  .hr-responsive {
+    @apply h-px my-8 bg-white border-0 block md:hidden sm:hidden lg:block;
+  }
 }

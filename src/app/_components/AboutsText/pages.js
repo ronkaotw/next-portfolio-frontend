@@ -1,26 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export default function AboutsText() {
-  const [abouts, setAbouts] = useState([]);
-
-  useEffect(() => {
-    async function fetchAbouts() {
-      try {
-        const res = await fetch("/api/about");
-        const result = await res.json();
-        const aboutsArray = result?.data?.getAbouts || [];
-        setAbouts(aboutsArray);
-      } catch (err) {
-        console.error("載入關於我的資料錯誤：", err);
-        setAbouts([]);
-      }
-    }
-
-    fetchAbouts();
-  }, []);
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -30,18 +11,15 @@ export default function AboutsText() {
       className="lg:w-full h-screen flex flex-col md:flex-row items-center justify-center gap-10 mt-3"
     >
       <div className="col">
-        <h2 className="text-3xl font-bold mb-4 text-[50px]">About</h2>
-        <hr className="lg:block relative h-px my-8 bg-white border-0 mt-5 md:hidden sm:hidden" />
-        <p className="text-[15px]">Aaron</p>
+        <h2 className="section-title">About</h2>
+        <hr className="hr-responsive" />
+        <p className="section-subtitle">Aaron</p>
       </div>
-
-      {abouts.map((abouts, index) => (
-        <div className="col" key={index}>
-          <p className="relative mt-5 w-full max-w-md sm:max-w-sm whitespace-normal">
-            {abouts.text}
-          </p>
-        </div>
-      ))}
+      <div className="col">
+        <p className="relative mt-5 w-full max-w-md sm:max-w-sm whitespace-normal">
+          我是一名充滿熱忱的後端開發人員，對資訊技術有高度興趣。在實習期間，我在一家新創公司學習並實踐了後端技術（如 Node.js）和前端框架（如 Vue.js）。這段經歷讓我參與了多個專案開發，並與資深工程師合作，提升了技術能力與解決問題的技巧。
+        </p>
+      </div>
     </motion.section>
   );
 }

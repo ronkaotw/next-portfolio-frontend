@@ -24,7 +24,7 @@ export default function FriendLinks() {
   ];
 
   return (
-    <section className="min-h-[calc(100vh-176px)] max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex items-center justify-center">
+    <section className="min-h-[calc(100vh-176px)] max-w-7xl mx-auto responsive-px responsive-py section-container">
       <ul className="w-full max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-12 lg:gap-y-16 place-items-center">
         {friendlySites.map((site) => (
           <li key={site.href} className="w-full max-w-sm">

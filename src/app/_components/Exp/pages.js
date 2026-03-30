@@ -1,26 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export default function Experience() {
-  const [exps, setExps] = useState([]);
-
-  useEffect(() => {
-    async function fetchResume() {
-      try {
-        const res = await fetch("/api/Exp");
-        const result = await res.json();
-        const resumeArray = result?.data?.getResumes || [];
-        setExps(resumeArray);
-      } catch (err) {
-        console.error("載入經驗資料錯誤：", err);
-        setExps([]);
-      }
-    }
-
-    fetchResume();
-  }, []);
-
   const timelineItems = [
     { year: "2019～2023", content: "矽塔資訊｜實習生" },
     { year: "2023", content: "製播組｜COSCUP" },
@@ -36,9 +17,9 @@ export default function Experience() {
       className="lg:w-full h-screen gap-36 p-10 flex flex-col md:flex-row justify-center items-center"
     >
       <div className="flex flex-col">
-        <h2 className="text-[50px] font-bold mb-4">Experience</h2>
-        <hr className="lg:h-px my-4 bg-white border-0 block md:hidden sm:hidden" />
-        <p className="text-[15px]">經驗</p>
+        <h2 className="section-title">Experience</h2>
+        <hr className="section-divider block md:hidden sm:hidden" />
+        <p className="section-subtitle">經驗</p>
       </div>
 
       <div className="flex flex-col gap-8">

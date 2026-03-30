@@ -7,7 +7,7 @@ export default function AboutComponents({ scrolling }) {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 md:gap-20 px-6 lg:px-24 relative"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left responsive-gap responsive-px relative"
     >
       <Image
         src="/Aaron_Logo.png"
